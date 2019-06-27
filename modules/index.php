@@ -17,7 +17,7 @@ function ex_content() {
         } elseif(get_row_layout() =='rotating_text') {
           get_template_part('modules/rotatingtext');
         } elseif(get_row_layout() =='testimonials') {
-          echo 'Testimonials!';
+          get_template_part('modules/testimonials');
         } elseif(get_row_layout() =='two_column') {
           get_template_part('modules/twocolumn');
         }

@@ -164,7 +164,7 @@ ol {
 /**
   Global Paragraph Settings
   ---------------------------------------------------------------------- */
-p {
+p, q {
   margin: 0;
   padding: 0 0 2em 0;
   line-height: 1.5em;
@@ -172,21 +172,24 @@ p {
 
 blockquote {
   display: block;
-  padding: 1em 1.25em 1em 3em;
-  margin: 0 0 1.25em 0;
   position: relative;
+  font-size: 1.15em;
 
-  &::before {
-    content: "\201C";
-    font-family: Georgia, serif;
-    font-size: 4em;
-    font-weight: bold;
-    position: absolute;
-    left: 0.5rem;
-    top: 0.25rem;
+  q {
+    font-family: $font-deco;
+    font-style: italic;
   }
+}
 
-  &::after {
-    content: "";
+cite {
+  display: block;
+  font-size: 1em;
+  margin-top: 2rem;
+  @include fontItalic(false);
+  line-height: 1.5;
+  font-size: 0.85em;
+
+  span {
+    display: block;
   }
 }

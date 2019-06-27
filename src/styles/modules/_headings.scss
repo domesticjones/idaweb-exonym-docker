@@ -1,7 +1,11 @@
 .module-heading {
-  @include grid(flex-start, center);
+  @include grid(center, center);
   min-height: 40vh;
-  padding: 10vw 5vw 5vw 5vw;
+  padding: 2.5vw 5vw;
+
+  &:first-of-type {
+    padding-top: 10vw;
+  }
 
   .headings h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1em;

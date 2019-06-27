@@ -37,7 +37,6 @@ export default {
 			const $thisBg = $this.find('.module-bg');
 			const ebg_height = $this.find('.module-bg').outerHeight();
 			const bg_diff = ebg_height - w_height;
-			// Boolean hit Check
 			const per_scrolled = (d_scroll + w_height) / b_height;
 			const offset = (bg_diff * per_scrolled);
 			$thisBg.css('transform', `translateY(-${offset}px)`);
@@ -70,12 +69,20 @@ export default {
       pauseOnFocus: false,
     });
 
+    // MODULES: Testimonial Slider
+    $('.slider-testimonials').slick({
+      rows: 0,
+      slide: '.testimonial',
+      autoplay: true,
+      autoplaySpeed: 9666,
+    });
+
     // MODULE: Vertical Slider
     $('.slider-vertical').slick({
       arrows: false,
       vertical: true,
       autoplay: true,
-      autoplaySpeed: 2666,
+      autoplaySpeed: 1666,
       pauseOnHover: false,
       pauseOnFocus: false,
     });
