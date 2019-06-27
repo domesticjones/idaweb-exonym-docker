@@ -1,6 +1,7 @@
 .headings {
   @include clearfix();
   font-size: 1rem;
+  margin-bottom: 1.5rem;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: $font-default;
@@ -27,5 +28,14 @@
     &-uppercase { text-transform: uppercase; }
     &-bold { font-weight: $font-bold; }
     &-deco { font-family: $font-deco; font-weight: $font-normal; }
+
+    &-underline::after {
+      content: '';
+      display: block;
+      width: 4rem;
+      height: 5px;
+      background-color: $gold;
+      margin-top: 1rem;
+    }
   }
 }

@@ -3,27 +3,25 @@ function ex_content() {
   if(have_rows('content_module')) {
     while(have_rows('content_module')) {
       the_row();
-      if(get_row_layout() =='blocks') {
-        echo 'Blocks!';
-      } elseif(get_row_layout() =='block_photo') {
-        ex_wrapper('start');
+      ex_wrapper('start');
+        if(get_row_layout() =='blocks') {
+          echo 'Blocks!';
+        } elseif(get_row_layout() =='block_photo') {
           get_template_part('modules/blockphoto');
-        ex_wrapper('end');
-      } elseif(get_row_layout() =='heading') {
-        echo 'Heading!';
-      } elseif(get_row_layout() =='hero_image') {
-        ex_wrapper('start');
+        } elseif(get_row_layout() =='heading') {
+          echo 'Heading!';
+        } elseif(get_row_layout() =='hero_image') {
           get_template_part('modules/hero');
-        ex_wrapper('end');
-      } elseif(get_row_layout() =='link_blocks') {
-        ex_wrapper('start');
+        } elseif(get_row_layout() =='link_blocks') {
           get_template_part('modules/linkblocks');
-        ex_wrapper('end');
-      } elseif(get_row_layout() =='testimonials') {
-        echo 'Testimonials!';
-      } elseif(get_row_layout() =='two_column') {
-        echo 'Two Column!';
-      }
+        } elseif(get_row_layout() =='rotating_text') {
+          get_template_part('modules/rotatingtext');
+        } elseif(get_row_layout() =='testimonials') {
+          echo 'Testimonials!';
+        } elseif(get_row_layout() =='two_column') {
+          echo 'Two Column!';
+        }
+      ex_wrapper('end');
     }
   }
 }

@@ -78,5 +78,15 @@ export default {
         scrollTop: $this.closest('.module').next().offset().top
       });
     });
+
+    // MODULE: Vertical Slider
+    $('.slider-vertical').slick({
+      arrows: false,
+      vertical: true,
+      autoplay: true,
+      autoplaySpeed: 2666,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+    });
   },
 };

@@ -35,6 +35,7 @@ li.cta-single {
     background-color: transparent;
     border: 1px solid $copper;
     color: inherit;
+    font-weight: $font-normal;
 
     &:hover {
       background-color: transparentize($copper, 0.86);
