@@ -7,6 +7,8 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+		<h1 id="site" class="header-meta"><?php echo get_bloginfo('name'); ?></h1>
+		<h2 id="tagline" class="header-meta"><?php echo get_bloginfo('description'); ?></h2>
 		<div id="container">
       <header id="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
         <div class="wrap">
