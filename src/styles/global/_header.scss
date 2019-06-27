@@ -1,19 +1,36 @@
 /**
   Global Website Header
   ---------------------------------------------------------------------- */
-  .header-meta {
-    transform: scale(0);
-    padding: 0;
-    margin: 0;
-    font-size: 0;
-  }
+.header-meta {
+  transform: scale(0);
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
 
 #header {
   @include grid(space-between, center);
+  @include transition();
+  background-color: transparent;
   padding: 3rem 2.5rem;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &.is-scrolled {
+    background-color: transparentize($white, 0.15);
+    padding: 1.5rem 2.5rem;
+
+    .logo-header {
+      height: 2rem;
+    }
+  }
 }
 
 .logo-header {
+  @include transition();
   position: relative;
   z-index: 1;
   display: block;

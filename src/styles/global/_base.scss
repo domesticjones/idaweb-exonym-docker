@@ -4,12 +4,11 @@
 html,
 body {
   max-width: 100%;
+  background-color: $white;
 }
 
-.wrap {
-  margin: 0 auto;
-  max-width: 100%;
-  position: relative;
+#container {
+  min-height: 400vh;
 }
 
 /**

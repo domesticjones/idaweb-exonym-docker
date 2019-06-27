@@ -8,21 +8,33 @@ export default {
 
   	// HEADER: Responsive Nav Toggle
   	$('#responsive-nav-toggle').click(e => {
+      e.preventDefault();
   		const $this = $(e.currentTarget);
   		$this.toggleClass('is-active');
   		$('#nav-header').toggleClass('is-active');
   	});
+
+    // HEADER: Add Class on Scroll
+    $(window).on('load scroll', () => {
+      let scroll = $(window).scrollTop();
+      if (scroll >= 150) {
+        $('#header').addClass('is-scrolled');
+      } else {
+        $('#header').removeClass('is-scrolled');
+      }
+    });
   },
   finalize() {
-  	// MODULES: Parallax
+  	// MODULES: Parallax Diamond (Customized from traditional parallax)
   	$(window).on('load resize scroll', () => {
   		const d_scroll = $(window).scrollTop();
   		const w_height = $(window).height();
+      const b_height = $('body').height();
   		$('.animate-parallax').each((i, e) => {
   			const $this = $(e);
   			const $thisBg = $this.find('.module-bg');
-  			const p_position = $this.offset().top;
-  			const e_height = $this.outerHeight();
+  			const p_position = d_scroll;
+  			const e_height = w_height;
   			const ebg_height = $this.find('.module-bg').outerHeight();
   			const bg_diff = ebg_height - e_height;
   			const dhit_in = p_position - w_height;
@@ -30,10 +42,12 @@ export default {
   			const dhit_read = p_position - w_height - d_scroll;
   			// Boolean hit Check
   			if (dhit_read <= 0 && d_scroll <= dhit_out) {
-  				const per_scrolled = (d_scroll - dhit_in) / (dhit_out - dhit_in);
+  				const per_scrolled = (d_scroll + w_height) / b_height;
   				const offset = (bg_diff * per_scrolled);
   				$thisBg.css('transform', `translateY(-${offset}px)`);
+          console.log(`per_scrolled: ${per_scrolled}`);
   			}
+        console.log(`body: ${b_height}`);
   		});
   	});
 

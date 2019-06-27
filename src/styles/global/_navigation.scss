@@ -8,6 +8,12 @@
   z-index: 2;
 
   &.is-active {
+    @include transition(all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275));
+
+    &:hover {
+      opacity: 0.8;
+    }
+
     .line {
       background-color: $white;
     }
@@ -31,14 +37,36 @@
   font-weight: $font-light;
   transform: scaleX(0);
 
-  li {
+  &::before {
     @include transition();
-    transition-delay: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    right: 100%;
+    top: 10vh;
+    width: 2.5vw;
+    height: 0;
+    border: 1px solid $gold;
+    border-right: none;
+    transition-delay: 400ms;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  li {
+    @include transition(opacity 250ms ease);
+    transition-delay: 0ms;
     opacity: 0;
   }
 
   &.is-active {
     transform: scaleX(1);
+
+    &::before {
+      height: 80vh;
+      transform: scaleX(1);
+    }
 
     li {
       opacity: 1;
@@ -52,7 +80,12 @@
   }
 
   a {
+    @include transition(all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275));
     color: $white;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 
