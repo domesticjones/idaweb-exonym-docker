@@ -33,21 +33,12 @@ export default {
   		$('.animate-parallax').each((i, e) => {
   			const $this = $(e);
   			const $thisBg = $this.find('.module-bg');
-  			const p_position = d_scroll;
-  			const e_height = w_height;
   			const ebg_height = $this.find('.module-bg').outerHeight();
-  			const bg_diff = ebg_height - e_height;
-  			const dhit_in = p_position - w_height;
-  			const dhit_out = p_position + e_height;
-  			const dhit_read = p_position - w_height - d_scroll;
+  			const bg_diff = ebg_height - w_height;
   			// Boolean hit Check
-  			if (dhit_read <= 0 && d_scroll <= dhit_out) {
-  				const per_scrolled = (d_scroll + w_height) / b_height;
-  				const offset = (bg_diff * per_scrolled);
-  				$thisBg.css('transform', `translateY(-${offset}px)`);
-          console.log(`per_scrolled: ${per_scrolled}`);
-  			}
-        console.log(`body: ${b_height}`);
+				const per_scrolled = (d_scroll + w_height) / b_height;
+				const offset = (bg_diff * per_scrolled);
+				$thisBg.css('transform', `translateY(-${offset}px)`);
   		});
   	});
 
