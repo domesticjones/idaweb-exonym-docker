@@ -15,7 +15,14 @@ export default {
   		const $this = $(e.currentTarget);
   		$this.toggleClass('is-active');
   		$('#nav-header').toggleClass('is-active');
+  		$('#container').toggleClass('nav-active');
   	});
+    $('.module, #footer').on('click', () => {
+      if($('#container').hasClass('nav-active')) {
+  		    $('#container').removeClass('nav-active');
+      		$('#nav-header, #responsive-nav-toggle').removeClass('is-active');
+      }
+    });
 
     // HEADER: Add Class on Scroll
     $(window).on('load scroll', () => {

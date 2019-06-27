@@ -7,8 +7,12 @@
     padding-top: 10vw;
   }
 
-  .headings h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1em;
+  .headings {
+    font-size: 1.25rem;
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 1em;
+    }
   }
 }
 
@@ -33,8 +37,8 @@
       &-xsmall { font-size: 1em; }
       &-small { font-size: 1.25em; }
       &-medium { font-size: 1.75em; }
-      &-large { font-size: 2.5em; }
-      &-xlarge { font-size: 3.5em; }
+      &-large { font-size: 2.25em; }
+      &-xlarge { font-size: 4em; }
     }
 
     &-color {

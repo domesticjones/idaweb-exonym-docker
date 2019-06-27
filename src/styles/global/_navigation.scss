@@ -1,7 +1,6 @@
 /**
   Responsive Navigation
   ---------------------------------------------------------------------- */
-
 #responsive-nav-toggle {
   @include hamburgerMenu(1, $navy, 0.6);
   position: relative;
@@ -86,6 +85,14 @@
     &:hover {
       opacity: 0.8;
     }
+  }
+}
+
+#container.nav-active {
+  .module,
+  #footer {
+    @include filter-blur(3px);
+    opacity: 0.14;
   }
 }
 

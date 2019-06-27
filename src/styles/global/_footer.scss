@@ -8,6 +8,7 @@
   background-color: $navy;
   color: $white;
   padding: 5vw;
+  @include transition();
 
   ul {
     @include listStripped();
