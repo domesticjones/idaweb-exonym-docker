@@ -1,13 +1,27 @@
+.module-heading {
+  @include grid(flex-start, center);
+  min-height: 40vh;
+  padding: 10vw 5vw 5vw 5vw;
+
+  .headings h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1em;
+  }
+}
+
 .headings {
   @include clearfix();
   font-size: 1rem;
   margin-bottom: 1.5rem;
+  width: 100%;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: $font-default;
     font-weight: $font-normal;
     letter-spacing: 0;
+    line-height: 1;
     text-transform: none;
+    width: 100%;
+    margin-bottom: 0.5em;
   }
 
   .h {
@@ -26,6 +40,7 @@
 
     &-kerning { letter-spacing: 0.5ex; }
     &-uppercase { text-transform: uppercase; }
+    &-lowercase { text-transform: lowercase; }
     &-bold { font-weight: $font-bold; }
     &-deco { font-family: $font-deco; font-weight: $font-normal; }
 
@@ -36,6 +51,21 @@
       height: 5px;
       background-color: $gold;
       margin-top: 1rem;
+    }
+
+    &-overline::before {
+      content: '';
+      display: block;
+      width: 4rem;
+      height: 5px;
+      background-color: $gold;
+      margin-bottom: 1.5rem;
+    }
+
+    &-align {
+      &-left { text-align: left; }
+      &-center { text-align: center; &.h-underline::after { margin: 1rem auto 0; } &.h-overline::before { margin: 0 auto 1.5rem; } }
+      &-right { text-align: right; &.h-underline::after { margin: 1rem 0 0 auto; } &.h-overline::before { margin: 0 0 1.5rem auto; } }
     }
   }
 }

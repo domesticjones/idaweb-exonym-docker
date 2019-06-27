@@ -9,7 +9,7 @@ function ex_content() {
         } elseif(get_row_layout() =='block_photo') {
           get_template_part('modules/blockphoto');
         } elseif(get_row_layout() =='heading') {
-          echo 'Heading!';
+          get_template_part('modules/heading');
         } elseif(get_row_layout() =='hero_image') {
           get_template_part('modules/hero');
         } elseif(get_row_layout() =='link_blocks') {
@@ -19,7 +19,7 @@ function ex_content() {
         } elseif(get_row_layout() =='testimonials') {
           echo 'Testimonials!';
         } elseif(get_row_layout() =='two_column') {
-          echo 'Two Column!';
+          get_template_part('modules/twocolumn');
         }
       ex_wrapper('end');
     }
