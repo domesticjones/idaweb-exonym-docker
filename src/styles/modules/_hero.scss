@@ -1,0 +1,88 @@
+.module-hero_image {
+  @include grid(flex-start, flex-end);
+  min-height: 100vh;
+
+  a {
+    color: $navy;
+  }
+}
+
+.hero-slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  .slick-list,
+  .slick-track {
+    height: 100%;
+  }
+
+  .slick-slide > div {
+    height: 100%;
+  }
+}
+
+.hero-tag {
+  @include grid(center, center);
+  position: absolute;
+  z-index: 1;
+  width: 50vw;
+  height: 100%;
+  padding-left: 3rem;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+  }
+}
+
+.hero-photo {
+  position: absolute;
+  left: 45vw;
+  top: 0;
+  z-index: 0;
+  width: 55vw;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+
+  img {
+    visibility: hidden;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  width: 40vw;
+  padding: 2rem 3rem;
+}
+
+.hero-next {
+  position: absolute;
+  z-index: 4;
+  left: calc(50% - 1.75rem);
+  background-color: $navy;
+  padding: 1em;
+  @include transition(all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275));
+
+  span {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.86;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    @include icon(arrowDown);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

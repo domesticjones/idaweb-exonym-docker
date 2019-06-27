@@ -10,8 +10,8 @@
 		<h1 id="site" class="header-meta"><?php echo get_bloginfo('name'); ?></h1>
 		<h2 id="tagline" class="header-meta"><?php echo get_bloginfo('description'); ?></h2>
 		<div id="container" class="animate-parallax animate-z-extreme">
-			<div class="module-bg animate-on-enter" style="background-image: url(<?php ex_logo('alternate', 'dark'); ?>);">
-				<img src="<?php ex_logo('alternate', 'dark'); ?>" alt="<?php ex_brand(); ?> Crystal Emblem" />
+			<div class="module-bg animate-on-enter" style="background-image: url(<?php ex_logo('alternate', 'light'); ?>);">
+				<img src="<?php ex_logo('alternate', 'light'); ?>" alt="<?php ex_brand(); ?> Crystal Emblem" />
 			</div>
       <header id="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
         <a href="<?php echo get_home_url(); ?>">

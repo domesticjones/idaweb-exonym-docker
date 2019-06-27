@@ -11,6 +11,11 @@ body {
   min-height: 400vh;
 }
 
+.module {
+  position: relative;
+  z-index: 1;
+}
+
 /**
   Global Link Defaults
   ---------------------------------------------------------------------- */
@@ -18,10 +23,8 @@ a {
   text-decoration: none;
 }
 
-@include linkColor($blue, all);
-
 /**
-  Wordpress Image ALignment
+  Wordpress Image Alignment
   ---------------------------------------------------------------------- */
 .aligncenter {
   margin: 1em auto;
@@ -38,21 +41,3 @@ a {
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
-@media (min-width: 1025px) {
-  .wrap {
-    width: 1150px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .wrap {
-    width: 1400px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .wrap {
-    width: 100%;
-    padding: 0 2rem;
-  }
-}

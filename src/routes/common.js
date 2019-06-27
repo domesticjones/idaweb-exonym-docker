@@ -1,5 +1,8 @@
+import $ from 'jquery';
+window.jQuery = $;
 require('jquery-visible');
-const $ = jQuery;
+require('slick-carousel');
+
 
 export default {
   init() {
@@ -55,5 +58,24 @@ export default {
   			}
   		});
   	});
+
+    // MODULES: Decorative Slideshow
+    $('.slider-deco').slick({
+      arrows: false,
+      fade: true,
+      autoplay: true,
+      autoplaySpeed: 6660,
+      speed: 666,
+    });
+
+    // HERO: Scroll to Next
+    $('a[href="#down"]').click(e => {
+      e.preventDefault();
+      const $this = $(e.currentTarget);
+      $('html, body').animate({
+        scrollTop: $this.closest('.module').next().offset().top
+      });
+      $this.closest('.module')
+    });
   },
 };

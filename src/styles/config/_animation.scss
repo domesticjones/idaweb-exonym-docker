@@ -7,6 +7,7 @@
 
   .module-bg {
     position: fixed;
+    z-index: 0;
     background-size: contain;
     background-position: right top;
     background-repeat: no-repeat;

@@ -1,12 +1,13 @@
-$white: #fff;
 $grey: #ccc;
-$black: #000;
 $red: #f00;
 $blue: #00f;
 
+$white: #fff;
+$black: #454545;
 $navy: #2E2E56;
 $brown: #79443E;
 $peach: #FE9878;
+$copper: #BD745D;
 $gold: #C6A53A;
 
 @mixin gradient($color1, $color2, $direction) {

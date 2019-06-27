@@ -10,6 +10,7 @@
 @import "styles/config/typography";
 @import "styles/config/forms";
 @import "styles/config/hamburger";
+@import "styles/config/icons";
 
 /**
   Global Elements
@@ -19,8 +20,10 @@
 @import "styles/global/header";
 @import "styles/global/footer";
 @import "styles/global/login";
+@import "~slick-carousel/slick/slick";
 
 /**
   Modules
   ---------------------------------------------------------------------- */
+@import "styles/modules/ctas";
 @import "styles/modules/hero";
