@@ -54,7 +54,7 @@ function ex_cta() {
 
 function ex_heading() {
   $output = '';
-  $i = 1;
+  $i = 0;
   if(have_rows('headings')) {
     $output .= '<header class="headings">';
     while(have_rows('headings')) {

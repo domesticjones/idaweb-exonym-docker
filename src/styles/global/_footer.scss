@@ -1,8 +1,108 @@
 /**
   Global Website Footer
   ---------------------------------------------------------------------- */
-.nav-footer {
-  @include navMenu(vertical);
+#footer {
+  @include grid(space-between);
+  position: relative;
+  z-index: 1;
+  background-color: $navy;
+  color: $white;
+  padding: 5vw;
+
+  ul {
+    @include listStripped();
+
+    .name {
+      display: none;
+    }
+
+    li {
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-family: $font-default;
+    margin-bottom: 2rem;
+    opacity: 0.333;
+  }
+
+  a {
+    color: $white;
+    @include transition(all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275));
+
+    &:hover {
+      opacity: 0.86;
+    }
+
+    &.cta-button {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+  }
+
+  .nav-phone,
+  .nav-email {
+    @include grid();
+    margin-bottom: 0.5em;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 1.5rem;
+      height: 1rem;
+      background-size: 1rem auto;
+      background-position: left center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .nav-phone::before { @include icon(phone); }
+  .nav-email::before { @include icon(envelope); }
+
+  .nav-social {
+    @include navMenu(horizontal);
+
+    a {
+      display: block;
+      margin-right: 1rem;
+    }
+
+    img {
+      height: 1.25rem;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .nav-subscribe {
+    width: 40%;
+    min-width: 40%;
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+    font-style: $font-italic;
+    margin-top: 2rem;
+  }
+}
+
+.footer-subscribe {
+  @include grid(flex-start, stretch);
+
+  button {
+    margin-left: 1.5rem;
+  }
+
+  input {
+    background-color: transparent;
+    color: $white;
+  }
 }
 
 /**
