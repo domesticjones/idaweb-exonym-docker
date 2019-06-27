@@ -3,3 +3,11 @@ $grey: #ccc;
 $black: #000;
 $red: #f00;
 $blue: #00f;
+
+$navy: #2E2E56;
+$brown: #79443E;
+$peach: #FE9878;
+
+@mixin gradient($color1, $color2, $direction) {
+  background: linear-gradient($direction, $color1 0%, $color2 100%);
+}

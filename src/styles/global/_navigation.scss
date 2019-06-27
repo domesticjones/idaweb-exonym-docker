@@ -3,5 +3,59 @@
   ---------------------------------------------------------------------- */
 
 #responsive-nav-toggle {
-  @include hamburgerMenu(9, $black, 0.75);
+  @include hamburgerMenu(1, $navy, 0.6);
+  position: relative;
+  z-index: 2;
+
+  &.is-active {
+    .line {
+      background-color: $white;
+    }
+  }
 }
+
+#nav-header {
+  @include navMenu(vertical);
+  @include grid(center, center);
+  @include gradient($brown, $peach, 135deg);
+  @include transition();
+  transform-origin: right;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 50vw;
+  font-size: 3.5em;
+  text-align: center;
+  font-weight: $font-light;
+  transform: scaleX(0);
+
+  li {
+    @include transition();
+    transition-delay: 0;
+    opacity: 0;
+  }
+
+  &.is-active {
+    transform: scaleX(1);
+
+    li {
+      opacity: 1;
+
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+          transition-delay: #{150ms + (86 * $i)};
+        }
+      }
+    }
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
