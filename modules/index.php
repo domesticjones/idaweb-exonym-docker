@@ -6,7 +6,9 @@ function ex_content() {
       if(get_row_layout() =='blocks') {
         echo 'Blocks!';
       } elseif(get_row_layout() =='block_photo') {
-        echo 'Block Photo!';
+        ex_wrapper('start');
+          get_template_part('modules/blockphoto');
+        ex_wrapper('end');
       } elseif(get_row_layout() =='heading') {
         echo 'Heading!';
       } elseif(get_row_layout() =='hero_image') {
@@ -46,6 +48,28 @@ function ex_cta() {
       $output .= '</li>';
     }
     $output .= '</ul>';
+  }
+  return $output;
+}
+
+function ex_heading() {
+  $output = '';
+  $i = 1;
+  if(have_rows('headings')) {
+    $output .= '<header class="headings">';
+    while(have_rows('headings')) {
+      the_row();
+      $i++;
+      $text = get_sub_field('text');
+      $options = get_sub_field('options');
+      $attrs = $options['attributes'];
+      foreach($attrs as &$v) {
+        $v = 'h-' . $v;
+      }
+      $class = 'h-color-' .  $options['color'] . ' h-size-' . $options['size'] . ' h-align-' . $options['align'] . ' ' . implode(' ', $attrs);
+      $output .= '<h' . $i . ' class="' . $class . '">' . $text . '</h' . $i . '>';
+    }
+    $output .= '</header>';
   }
   return $output;
 }

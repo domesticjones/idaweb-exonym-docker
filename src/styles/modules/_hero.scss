@@ -1,6 +1,7 @@
 .module-hero_image {
   @include grid(flex-start, flex-end);
   min-height: 100vh;
+  padding: 0;
 
   a {
     color: $navy;
@@ -11,15 +12,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-
-  .slick-list,
-  .slick-track {
-    height: 100%;
-  }
-
-  .slick-slide > div {
-    height: 100%;
-  }
 }
 
 .hero-tag {
@@ -41,7 +33,7 @@
 
 .hero-photo {
   position: absolute;
-  left: 45vw;
+  right: 0;
   top: 0;
   z-index: 0;
   width: 55vw;

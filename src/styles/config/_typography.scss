@@ -1,10 +1,10 @@
 /**
   Font Families & Settings
   ---------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i");
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Lato:300,300i,400,400i,700,700i&display=swap');
 
-$font-default: "Lato", sans-serif;
-$font-heading: "Lato", sans-serif;
+$font-default: 'Lato', sans-serif;
+$font-deco: 'Josefin Sans', sans-serif;
 
 $font-size: 16px;
 
@@ -87,31 +87,6 @@ body {
 }
 
 /**
-  Exonym Module Text Sizes
-  ---------------------------------------------------------------------- */
-.module-text-size {
-  &-xsmall {
-    font-size: 0.75em;
-  }
-
-  &-small {
-    font-size: 0.85em;
-  }
-
-  &-normal {
-    font-size: 1em;
-  }
-
-  &-large {
-    font-size: 1.25em;
-  }
-
-  &-xlarge {
-    font-size: 1.5em;
-  }
-}
-
-/**
   Global Website Headings
   ---------------------------------------------------------------------- */
 h1,
@@ -126,7 +101,7 @@ h6 {
   padding: 0;
   margin: 0;
   line-height: 1;
-  font-family: $font-heading;
+  font-family: $font-deco;
 
   @include fontBold();
 }

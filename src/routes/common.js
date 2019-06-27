@@ -66,6 +66,8 @@ export default {
       autoplay: true,
       autoplaySpeed: 6660,
       speed: 666,
+      pauseOnHover: false,
+      pauseOnFocus: false,
     });
 
     // HERO: Scroll to Next
@@ -75,7 +77,6 @@ export default {
       $('html, body').animate({
         scrollTop: $this.closest('.module').next().offset().top
       });
-      $this.closest('.module')
     });
   },
 };
