@@ -16,7 +16,9 @@ function ex_content() {
           get_template_part('modules/hero');
         ex_wrapper('end');
       } elseif(get_row_layout() =='link_blocks') {
-        echo 'Link Blocks!';
+        ex_wrapper('start');
+          get_template_part('modules/linkblocks');
+        ex_wrapper('end');
       } elseif(get_row_layout() =='testimonials') {
         echo 'Testimonials!';
       } elseif(get_row_layout() =='two_column') {
