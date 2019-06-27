@@ -70,15 +70,6 @@ export default {
       pauseOnFocus: false,
     });
 
-    // HERO: Scroll to Next
-    $('a[href="#down"]').click(e => {
-      e.preventDefault();
-      const $this = $(e.currentTarget);
-      $('html, body').animate({
-        scrollTop: $this.closest('.module').next().offset().top
-      });
-    });
-
     // MODULE: Vertical Slider
     $('.slider-vertical').slick({
       arrows: false,
@@ -87,6 +78,15 @@ export default {
       autoplaySpeed: 2666,
       pauseOnHover: false,
       pauseOnFocus: false,
+    });
+
+    // HERO: Scroll to Next
+    $('a[href="#down"]').click(e => {
+      e.preventDefault();
+      const $this = $(e.currentTarget);
+      $('html, body').animate({
+        scrollTop: $this.closest('.module').next().offset().top
+      });
     });
   },
 };

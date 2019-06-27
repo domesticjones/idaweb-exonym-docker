@@ -1,0 +1,36 @@
+.twocolumn-wrap {
+  @include grid(center, stretch);
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .twocolumn-photos {
+    margin: 0 3rem 0 0;
+
+    .slick-slide > div > div {
+      height: 100%;
+    }
+  }
+
+  &-reverse {
+    @include grid(center, stretch, row-reverse);
+
+    .twocolumn-photos {
+      margin: 0 0 0 3rem;
+    }
+  }
+}
+
+.twocolumn-content {
+  padding: 5vw 0;
+}
+
+.twocolumn-photo {
+  height: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  img {
+    display: none;
+  }
+}
