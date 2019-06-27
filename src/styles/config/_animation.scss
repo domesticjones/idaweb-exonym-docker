@@ -7,8 +7,8 @@
 
   .module-bg {
     position: fixed;
-    background-size: cover;
-    background-position: right center;
+    background-size: contain;
+    background-position: right top;
     background-repeat: no-repeat;
     top: 0;
     left: auto;
@@ -29,11 +29,9 @@
 .animate-on-leave {
   @include transition(all 300ms ease-out);
   opacity: 0;
-  top: 4rem;
 
   &.is-visible {
     opacity: 1;
-    top: 0;
   }
 }
 

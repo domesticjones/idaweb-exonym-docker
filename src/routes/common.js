@@ -30,16 +30,14 @@ export default {
   		const d_scroll = $(window).scrollTop();
   		const w_height = $(window).height();
       const b_height = $('body').height();
-  		$('.animate-parallax').each((i, e) => {
-  			const $this = $(e);
-  			const $thisBg = $this.find('.module-bg');
-  			const ebg_height = $this.find('.module-bg').outerHeight();
-  			const bg_diff = ebg_height - w_height;
-  			// Boolean hit Check
-				const per_scrolled = (d_scroll + w_height) / b_height;
-				const offset = (bg_diff * per_scrolled);
-				$thisBg.css('transform', `translateY(-${offset}px)`);
-  		});
+			const $this = $('#container');
+			const $thisBg = $this.find('.module-bg');
+			const ebg_height = $this.find('.module-bg').outerHeight();
+			const bg_diff = ebg_height - w_height;
+			// Boolean hit Check
+			const per_scrolled = (d_scroll + w_height) / b_height;
+			const offset = (bg_diff * per_scrolled);
+			$thisBg.css('transform', `translateY(-${offset}px)`);
   	});
 
   	// MODULES: Animate onScreen
