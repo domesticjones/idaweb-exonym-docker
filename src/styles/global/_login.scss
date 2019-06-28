@@ -71,7 +71,9 @@ body.login {
       text-shadow: none;
       @include transition();
 
-      &:hover {
+      &:hover,
+      &:focus,
+      &:active {
         background-color: transparentize($copper, 0.86);
       }
     }

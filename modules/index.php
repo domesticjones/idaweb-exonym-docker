@@ -5,7 +5,7 @@ function ex_content() {
       the_row();
       ex_wrapper('start');
         if(get_row_layout() =='blocks') {
-          echo 'Blocks!';
+          get_template_part('modules/blocks');
         } elseif(get_row_layout() =='block_photo') {
           get_template_part('modules/blockphoto');
         } elseif(get_row_layout() =='heading') {

@@ -1,0 +1,39 @@
+.blocks-wrap {
+  @include listStripped();
+  @include grid();
+  padding: 0 5vw;
+}
+
+li.block-single {
+  flex: 1 1 0;
+  padding: 1rem;
+}
+
+.block-photo {
+  height: 15vw;
+  padding: 1.5vw 2.5vw;
+  @include grid(flex-start, flex-end);
+  background-size: center center;
+  background-size: cover;
+
+  img {
+    display: none;
+  }
+
+  h2 {
+    font-size: 5rem;
+    color: $white;
+    font-weight: $font-normal;
+    margin: 0;
+  }
+}
+
+.block-content {
+  padding: 2vw 1vw;
+
+  h3 {
+    color: $navy;
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
