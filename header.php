@@ -21,9 +21,9 @@
 				</a>
         <nav id="nav-header" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
           <?php wp_nav_menu(array(
-            'container' => false,								// remove nav container
-            'theme_location' => 'header-menu',	// where it's located in the theme
-            'depth' => 1,												// limit the depth of the nav
+            'container' => false,
+            'theme_location' => 'header-menu',
+            'depth' => 1,
           )); ?>
         </nav>
       </header>

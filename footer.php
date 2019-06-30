@@ -11,17 +11,17 @@
 				<nav class="nav-full" role="navigation">
 					<h3>Navigation</h3>
 					<?php wp_nav_menu(array(
-						'container' => 'ul',                    // enter '' to remove nav container
-						'theme_location' => 'full-menu',		  // where it's located in the theme
-						'depth' => 1,							              // limit the depth of the nav
+						'container' => 'ul',
+						'theme_location' => 'full-menu',
+						'depth' => 1,
 					)); ?>
 				</nav>
 				<nav class="nav-legal" role="navigation">
 					<h3>Legal</h3>
 					<?php wp_nav_menu(array(
-						'container' => 'ul',                    // enter '' to remove nav container
-						'theme_location' => 'legal-menu',		  // where it's located in the theme
-						'depth' => 1,							              // limit the depth of the nav
+						'container' => 'ul',
+						'theme_location' => 'legal-menu',
+						'depth' => 1,
 					)); ?>
 					<p class="copyright">&copy; <?php ex_brand('legal'); ?>, <?php echo date('Y'); ?></p>
 				</nav>
@@ -37,10 +37,11 @@
 						$subscribeButton = get_field('subscribe_button_text', 'options');
 					?>
 					<p id="subscribe-text-entice" class="subscribe-text"><?php echo $subscribeText['entice']; ?></p>
-					<p id="subscribe-text-error" class="subscribe-text"><?php echo $subscribeText['error']; ?></p>
-					<p id="subscribe-text-entice" class="subscribe-text"><?php echo $subscribeText['success']; ?></p>
-					<form class="footer-subscribe">
-						<input type="email" placeholder="<?php echo $subscribeLabel; ?>">
+					<p id="subscribe-text-error" class="subscribe-text"><?php echo $subscribeText['error']; ?><span></span></p>
+					<p id="subscribe-text-success" class="subscribe-text"><?php echo $subscribeText['success']; ?></p>
+					<form action="https://idahowebsites.us3.list-manage.com/subscribe/post-json?u=d7300d8f59a3e9a226106e843&amp;id=ecaa785fb9&c=?" method="get" id="subscribe-form" class="footer-subscribe">
+						<input type="email" name="EMAIL" placeholder="<?php echo $subscribeLabel; ?>">
+					  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d7300d8f59a3e9a226106e843_ecaa785fb9" tabindex="-1" value=""></div>
 						<button type="submit" class="cta-button cta-button-solid"><?php echo $subscribeButton; ?></button>
 					</form>
 				</section>

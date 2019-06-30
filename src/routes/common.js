@@ -33,6 +33,44 @@ export default {
         $('#header').removeClass('is-scrolled');
       }
     });
+
+    // MAILCHIMP: Footer Newsletter Signup AJAX Form
+    const $mcForm = $('#subscribe-form');
+    if($mcForm.length > 0) {
+      $mcForm.submit((e) => {
+          e.preventDefault();
+          register($mcForm);
+      });
+    }
+    if(localStorage.getItem('idahowebsitesSubscribe')) {
+      $('#subscribe-text-success').addClass('is-active');
+      $mcForm.addClass('is-subscribed');
+    } else {
+      $('#subscribe-text-entice').addClass('is-active');
+    }
+    function register($form) {
+      $.ajax({
+        type: $form.attr('method'),
+        url: $form.attr('action'),
+        data: $form.serialize(),
+        cache: false,
+        dataType: 'json',
+        contentType: 'application/json; charset=utf-8',
+        error: (err) => { alert('Could not connect to the registration server. Please try again later.'); },
+        success: (data) => {
+          if (data.result != 'success') {
+            $('.subscribe-text').removeClass('is-active');
+            $('#subscribe-text-error').addClass('is-active');
+            $('#subscribe-text-error span').html(`<em>${data.msg.replace('0 - ', ' ')}.</em>`);
+          } else {
+            $('.subscribe-text').removeClass('is-active');
+            $('#subscribe-text-success').addClass('is-active');
+            $mcForm.addClass('is-subscribed');
+            localStorage.setItem('idahowebsitesSubscribe',true);
+          }
+        }
+      });
+    }
   },
   finalize() {
   	// MODULES: Parallax Diamond (Customized from traditional parallax)

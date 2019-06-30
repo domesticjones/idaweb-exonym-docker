@@ -44,3 +44,19 @@
   min-height: 60vh;
   padding: 2.5vw;
 }
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .blockphoto-content,
+  .blockphoto-images {
+    width: 50%;
+    transform: none !important;
+    padding: 0;
+  }
+
+  .blockphoto-data {
+    padding: 2rem;
+  }
+}

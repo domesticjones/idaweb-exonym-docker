@@ -106,6 +106,67 @@
   }
 }
 
+.subscribe-text {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+
+  em {
+    color: $gold;
+  }
+}
+
+#subscribe-form {
+  &.is-subscribed {
+    display: none;
+  }
+}
+
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  #footer {
+    @include grid(center, center, column);
+    padding-bottom: 0;
+
+    & > section,
+    & > nav {
+      width: 100% !important;
+      text-align: center;
+      margin: 1em auto;
+    }
+
+    h3 {
+      display: none;
+    }
+
+    .nav-contact {
+      order: 1;
+
+      .nav-email,
+      .nav-phone {
+        @include grid(center);
+      }
+    }
+
+    .nav-follow {
+      order: 2;
+
+      .nav-social a {
+        margin: 0 1em;
+      }
+    }
+
+    .nav-full,
+    .nav-subscribe {
+      display: none;
+    }
+
+    .nav-legal {
+      order: 3;
+    }
+  }
+}
