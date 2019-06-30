@@ -53,3 +53,12 @@
   padding: 3rem;
   text-align: center;
 }
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media(max-width: 650px) {
+  .testimonial {
+    padding: 0 0 2rem 0;
+  }
+}

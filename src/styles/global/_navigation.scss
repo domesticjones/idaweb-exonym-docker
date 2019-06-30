@@ -99,3 +99,19 @@
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  #nav-header {
+    width: 66.6vw;
+
+    ul li {
+      font-size: 0.75em;
+      margin: 1em 0;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  #nav-header {
+    width: 100%;
+  }
+}

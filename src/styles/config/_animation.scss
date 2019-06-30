@@ -50,3 +50,24 @@
 .animate-z-extreme .module-bg {
   height: calc(150vh + 16rem);
 }
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media(max-width: 1024px) {
+  .animate-parallax .module-bg {
+    background-size: cover;
+  }
+}
+
+@media(max-width: 768px) {
+  .animate-parallax .module-bg {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+  }
+
+  .animate-z-extreme .module-bg {
+    height: 125vh;
+  }
+}

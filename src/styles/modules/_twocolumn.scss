@@ -1,6 +1,7 @@
 .twocolumn-wrap {
   @include grid(center, stretch);
   max-width: 1200px;
+  padding: 0 2rem;
   margin: 0 auto;
 
   .twocolumn-photos {
@@ -32,5 +33,30 @@
 
   img {
     display: none;
+  }
+}
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media(max-width: 768px) {
+  .twocolumn-wrap-reverse,
+  .twocolumn-wrap-normal {
+    @include grid(center, center, column);
+  }
+
+  .twocolumn-content {
+    width: 100% !important;
+    margin: 0;
+  }
+
+  .twocolumn-photos {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .twocolumn-photo {
+    background-size: contain;
+    height: 40vh;
   }
 }

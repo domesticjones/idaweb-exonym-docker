@@ -44,8 +44,14 @@
   #header.is-scrolled {
     padding: 0.75rem 1.5rem;
   }
+}
 
-  #nav-header {
-    width: 66.6vw;
+@media (max-width: 650px) {
+  #header {
+    padding: 0.75rem 1.5rem;
+
+    .logo-header {
+      height: 2rem;
+    }
   }
 }

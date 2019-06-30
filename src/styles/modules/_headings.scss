@@ -77,13 +77,17 @@
   }
 }
 
-
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-
   .headings {
     font-size: 0.75em;
+  }
+}
+
+@media (max-width: 768px) {
+  .module-heading:first-of-type {
+    padding-top: 6rem;
   }
 }

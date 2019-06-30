@@ -60,3 +60,25 @@
     padding: 2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .blockphoto-wrap-normal,
+  .blockphoto-wrap-reverse {
+    @include grid(flex-start, flex-start, column);
+  }
+
+  .blockphoto-images {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+  }
+
+  .blockphoto-image,
+  .blockphoto-content {
+    width: 100%;
+  }
+
+  .blockphoto-data {
+    min-height: 1px;
+  }
+}

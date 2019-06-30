@@ -26,3 +26,16 @@
   text-align: right;
   color: $navy;
 }
+
+@media(max-width: 650px) {
+  .rotatingtext-wrap {
+    @include grid(center, center, column);
+    padding: 2rem;
+
+    .slider-vertical,
+    .rotatingtext-pre {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

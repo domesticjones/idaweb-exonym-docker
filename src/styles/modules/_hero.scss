@@ -80,3 +80,54 @@
     background-repeat: no-repeat;
   }
 }
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .module-hero_image {
+    display: block;
+  }
+
+  .hero-tag,
+  .hero-photo {
+    @include grid(center, center);
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    padding: 2rem;
+  }
+
+  .hero-tag img {
+    margin: 0;
+    max-height: 100%;
+  }
+
+  .hero-slides {
+    position: relative;
+  }
+
+  .hero-next {
+    left: auto;
+    right: 1rem;
+    top: calc(100vh - 4rem);
+    width: 3rem;
+    padding: 0.75rem;
+    z-index: 6;
+  }
+
+  .hero-content {
+    padding: 2rem;
+    width: 100%;
+  }
+}
+
+@media(max-width: 650px) {
+  .hero-next {
+    display: none;
+  }
+
+  .hero-tag {
+    height: 25vh;
+  }
+}

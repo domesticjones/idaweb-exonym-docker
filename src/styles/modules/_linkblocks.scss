@@ -67,3 +67,29 @@
     }
   }
 }
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media(max-width: 768px) {
+  .linkblocks-wrap {
+    @include grid(center, stretch, row, wrap);
+  }
+
+  .linkblock {
+    min-width: 50%;
+  }
+}
+
+@media(max-width: 650px) {
+  .linkblock {
+    @include grid(flex-start, center);
+    min-width: 100%;
+    padding: 4rem 2rem 2rem 2rem;
+    min-height: 25vh;
+
+    .headings {
+      margin-bottom: 0;
+    }
+  }
+}

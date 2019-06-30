@@ -137,7 +137,7 @@ export default {
       e.preventDefault();
       const $this = $(e.currentTarget);
       $('html, body').animate({
-        scrollTop: $this.closest('.module').next().offset().top
+        scrollTop: $this.closest('.module').next().offset().top - 60
       });
     });
   },

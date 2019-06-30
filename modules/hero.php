@@ -9,8 +9,8 @@
       $tagline = get_sub_field('tagline');
       $image = get_sub_field('image');
       echo '<div>';
-        echo '<div class="hero-tag">' . wp_get_attachment_image($tagline['id'], 'large') . '</div>';
         echo '<div class="hero-photo" style="background-image: url(' . $image['sizes']['large'] . ')">' . wp_get_attachment_image($image['id'], 'large') . '</div>';
+        echo '<div class="hero-tag">' . wp_get_attachment_image($tagline['id'], 'large') . '</div>';
       echo '</div>';
     }
     echo '</div>';

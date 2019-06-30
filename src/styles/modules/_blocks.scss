@@ -13,7 +13,7 @@ li.block-single {
   height: 15vw;
   padding: 1.5vw 2.5vw;
   @include grid(flex-start, flex-end);
-  background-size: center center;
+  background-position: center center;
   background-size: cover;
 
   img {
@@ -35,5 +35,28 @@ li.block-single {
     color: $navy;
     font-size: 1.5rem;
     margin-bottom: 2.5rem;
+  }
+}
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .blocks-wrap {
+    @include grid(center, flex-start, row, wrap);
+  }
+
+  .block-single {
+    min-width: 100%;
+  }
+
+  .block-photo {
+    min-height: 30vh;
+  }
+}
+
+@media (max-width: 650px) {
+  .blocks-wrap {
+    padding: 0;
   }
 }
