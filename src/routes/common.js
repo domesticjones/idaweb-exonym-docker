@@ -24,6 +24,9 @@ export default {
       }
     });
 
+    // Make very first module active on load
+    $('.module:first-of-type').addClass('is-visible');
+
     // HEADER: Add Class on Scroll
     $(window).on('load scroll', () => {
       let scroll = $(window).scrollTop();
