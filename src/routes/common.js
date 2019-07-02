@@ -19,8 +19,8 @@ export default {
   	});
     $('.module, #footer').on('click', () => {
       if($('#container').hasClass('nav-active')) {
-  		    $('#container').removeClass('nav-active');
-      		$('#nav-header, #responsive-nav-toggle').removeClass('is-active');
+		    $('#container').removeClass('nav-active');
+    		$('#nav-header, #responsive-nav-toggle').removeClass('is-active');
       }
     });
 

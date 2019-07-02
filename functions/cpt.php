@@ -66,10 +66,22 @@ function cpt_services() {
 }
 add_action( 'init', 'cpt_services', 0 );
 
-function redirect_cpt_archive() {
-    if( !is_admin && is_post_type_archive( 'service' ) ) {
-        wp_redirect( home_url( 'services' ), 301 );
-        exit();
-    }
+// Redirect archives to page
+function redirect_services_archive() {
+  if( !is_admin && is_post_type_archive( 'service' ) ) {
+    wp_redirect( home_url( 'services' ), 301 );
+    exit();
+  }
 }
 add_action( 'template_redirect', 'redirect_cpt_archive' );
+
+// Change Enter Title Here
+function wpb_change_title_text($title){
+$screen = get_current_screen();
+  if('service' == $screen->post_type) {
+    $title = 'Enter the name of the service';
+  }
+  return $title;
+}
+
+add_filter( 'enter_title_here', 'wpb_change_title_text' );

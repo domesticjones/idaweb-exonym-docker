@@ -1,3 +1,18 @@
+<?php
+	$footerForm = get_field('contact_form', 'options');
+	if($footerForm && is_page_template() != 'page-contact.php') {
+		$footerFormBg = get_field('contact_form_photo', 'options');
+		echo '<footer id="footer-form" class="module" style="background-image: url(' . $footerFormBg['sizes']['jumbo'] . ')"><div class="footer-form-inner">';
+			if(have_rows('contact_form_heading', 'options')) {
+				while(have_rows('contact_form_heading', 'options')) {
+					the_row();
+					echo ex_heading();
+					echo do_shortcode('[contact-form-7 id="' . $footerForm . '"]');
+				}
+			}
+		echo '</div></footer>';
+	}
+?>
 			<footer id="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 				<section class="nav-contact">
 					<h3>Contact Us</h3>

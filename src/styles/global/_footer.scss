@@ -124,6 +124,18 @@
   }
 }
 
+#footer-form {
+  padding: 4vw;
+  background-size: cover;
+  background-position: center center;
+}
+
+.footer-form-inner {
+  background-color: $navyTrans;
+  color: $white;
+  padding: 4vw;
+}
+
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */

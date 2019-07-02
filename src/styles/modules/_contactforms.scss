@@ -1,0 +1,84 @@
+.wpcf7-form {
+  @include clearfix();
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem;
+
+  .form-column-left {
+    width: 35%;
+    float: left;
+    padding-right: 1em;
+
+    p {
+      padding: 0 0 1rem 0;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 1.25em;
+
+      &.wpcf7-checkbox {
+        @include grid(flex-start, center, row, wrap);
+
+        .wpcf7-list-item {
+          margin: 0;
+        }
+
+        label {
+          @include grid(flex-start, center);
+          line-height: 1;
+          margin: 0 1.5em 1em 0;
+          padding: 0;
+
+          span {
+            margin: 0;
+            font-size: 0.8em;
+          }
+
+          input {
+            margin: 0 0.5rem 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .form-column-right {
+    width: 65%;
+    float: right;
+    padding-left: 1em;
+  }
+
+  br {
+    display: none;
+  }
+
+  button {
+    float: right;
+    background-color: $copper;
+    text-transform: uppercase;
+    color: $white;
+    letter-spacing: 0.5ex;
+    font-size: 0.75em;
+    padding: 1.25em 2em;
+    @include transition();
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media(max-width: 768px) {
+  .wpcf7-form {
+    .form-column-left,
+    .form-column-right {
+      float: none;
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
