@@ -1,0 +1,75 @@
+.module-contact-info {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto 4rem auto;
+}
+
+.module-contact-data {
+  @include grid(center);
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: 0 auto;
+
+  a {
+    color: $navy;
+  }
+
+  ul {
+    @include listStripped();
+    @include grid(center, center, column);
+    text-align: center;
+
+    li {
+      margin-bottom: 1em;
+    }
+
+    span {
+      display: block;
+
+      &.name {
+        color: $black;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5ex;
+        @include fontBold();
+      }
+    }
+  }
+
+  .nav-social ul {
+    @include grid(center, center);
+
+    span {
+      display: none;
+    }
+
+    img {
+      height: 1.5rem;
+      width: auto;
+    }
+
+    li {
+      margin: 0.5rem;
+    }
+  }
+}
+
+.contact-info-left,
+.contact-info-right {
+  @include grid(flex-start, center, column);
+  width: 50%;
+  padding: 1rem;
+}
+
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media(max-width: 650px) {
+  .module-contact-data,
+  .contact-info-left,
+  .contact-info-right {
+    @include grid(center, center, column);
+    width: 100%;
+  }
+}

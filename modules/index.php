@@ -26,10 +26,13 @@ function ex_content() {
   }
 }
 
-function ex_wrapper($pos) {
+function ex_wrapper($pos, $name = '') {
+  if(empty($name)) {
+    $name = get_row_layout();
+  }
   if($pos == 'start') {
     $id = get_sub_field('module_id');
-    echo '<section id="' . $id . '" class="module module-' . get_row_layout() . ' animate-on-enter">';
+    echo '<section id="' . $id . '" class="module module-' . $name . ' animate-on-enter">';
   } elseif($pos == 'end') {
     echo '</section>';
   }
