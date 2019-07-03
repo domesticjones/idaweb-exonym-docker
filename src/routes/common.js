@@ -7,7 +7,7 @@ require('slick-carousel');
 export default {
   init() {
   	// Wrap embedded objects and force them into 16:9
-  	$('iframe, embed, video').not('.ignore-ratio').wrap('<div class="video-container" />');
+  	$('iframe, embed, video').not('.ignore-ratio').not('#modal-funnel iframe').wrap('<div class="video-container" />');
 
   	// HEADER: Responsive Nav Toggle
   	$('#responsive-nav-toggle').click(e => {
@@ -135,7 +135,7 @@ export default {
       pauseOnFocus: false,
     });
 
-    // HERO: Scroll to Next
+    // LINK: Scroll to Next
     $('a[href="#down"]').click(e => {
       e.preventDefault();
       const $this = $(e.currentTarget);
@@ -143,5 +143,39 @@ export default {
         scrollTop: $this.closest('.module').next().offset().top - 60
       });
     });
+
+    // LINK: Open Schedule Funnel
+    $('a[href="#schedule"]').click(e => {
+      e.preventDefault();
+  		$('#container').addClass('modal-active');
+      $('#modal-funnel').addClass('is-active');
+    });
+
+    // LINK: Scroll to Contact Form
+    $('a[href="#contact"]').click(e => {
+      e.preventDefault();
+      const $this = $(e.currentTarget);
+      $('html, body').animate({
+        scrollTop: $('#footer-form').offset().top - 60
+      });
+    });
+
+    // MODAL: Close Modal Window
+    $('.modal-close').on('click', e => {
+      e.preventDefault();
+  		$('#container').removeClass('modal-active');
+      $('#modal-funnel').removeClass('is-active');
+    });
+    $('.modal-matte').on('click', () => {
+      $('#container').removeClass('modal-active');
+      $('#modal-funnel').removeClass('is-active');
+    });
+
+    // FUNNEL: Event Listener for Step Switch
+    var wpcf7Elm = document.querySelector('#modal-funnel .wpcf7');
+    wpcf7Elm.addEventListener('wpcf7invalid', (e) => {
+      $('#funnel-step-first').removeClass('is-active');
+      $('#funnel-step-second').addClass('is-active');
+    }, false);
   },
 };

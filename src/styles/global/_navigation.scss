@@ -88,7 +88,8 @@
   }
 }
 
-#container.nav-active {
+#container.nav-active,
+#container.modal-active {
   .module,
   #footer {
     @include filter-blur(3px);

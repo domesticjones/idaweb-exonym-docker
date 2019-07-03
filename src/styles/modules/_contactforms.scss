@@ -4,25 +4,19 @@
   max-width: 1200px;
   padding: 2rem;
 
-  .form-column-left {
-    width: 35%;
-    float: left;
-    padding-right: 1em;
+  p {
+    padding: 0 0 1rem 0;
+  }
 
-    p {
-      padding: 0 0 1rem 0;
-    }
+  span {
+    display: block;
+    margin-bottom: 1.25em;
 
-    span {
-      display: block;
-      margin-bottom: 1.25em;
+    &.wpcf7-checkbox {
+      @include grid(flex-start, center, row, wrap);
 
-      &.wpcf7-checkbox {
-        @include grid(flex-start, center, row, wrap);
-
-        .wpcf7-list-item {
-          margin: 0;
-        }
+      .wpcf7-list-item {
+        margin: 0;
 
         label {
           @include grid(flex-start, center);
@@ -43,12 +37,6 @@
     }
   }
 
-  .form-column-right {
-    width: 65%;
-    float: right;
-    padding-left: 1em;
-  }
-
   br {
     display: none;
   }
@@ -67,6 +55,24 @@
       opacity: 0.8;
     }
   }
+
+  .form-column-left {
+    width: 35%;
+    float: left;
+    padding-right: 1em;
+  }
+
+  .form-column-right {
+    width: 65%;
+    float: right;
+    padding-left: 1em;
+  }
+}
+
+.wpcf7-response-output {
+  @include clearfix();
+  width: 100%;
+  text-align: center;
 }
 
 /**

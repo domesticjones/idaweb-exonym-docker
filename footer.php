@@ -1,18 +1,18 @@
-<?php
-	$footerForm = get_field('contact_form', 'options');
-	if($footerForm && is_page_template() != 'page-contact.php') {
-		$footerFormBg = get_field('contact_form_photo', 'options');
-		echo '<footer id="footer-form" class="module" style="background-image: url(' . $footerFormBg['sizes']['jumbo'] . ')"><div class="footer-form-inner">';
-			if(have_rows('contact_form_heading', 'options')) {
-				while(have_rows('contact_form_heading', 'options')) {
-					the_row();
-					echo ex_heading();
-					echo do_shortcode('[contact-form-7 id="' . $footerForm . '"]');
+			<?php
+				$footerForm = get_field('contact_form', 'options');
+				if($footerForm && is_page_template() != 'page-contact.php') {
+					$footerFormBg = get_field('contact_form_photo', 'options');
+					echo '<footer id="footer-form" class="module" style="background-image: url(' . $footerFormBg['sizes']['jumbo'] . ')"><div class="footer-form-inner">';
+						if(have_rows('contact_form_heading', 'options')) {
+							while(have_rows('contact_form_heading', 'options')) {
+								the_row();
+								echo ex_heading();
+								echo do_shortcode('[contact-form-7 id="' . $footerForm . '"]');
+							}
+						}
+					echo '</div></footer>';
 				}
-			}
-		echo '</div></footer>';
-	}
-?>
+			?>
 			<footer id="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 				<section class="nav-contact">
 					<h3>Contact Us</h3>
@@ -63,6 +63,34 @@
 			</footer>
 			<div class="module-bg animate-on-enter" style="background-image: url(<?php ex_logo('alternate', 'light'); ?>);">
 				<img src="<?php ex_logo('alternate', 'light'); ?>" alt="<?php ex_brand(); ?> Crystal Emblem" />
+			</div>
+		</div>
+		<div id="modal-funnel" class="modal-parent">
+			<div class="modal-close"></div>
+			<div class="modal-matte"></div>
+			<div class="modal-inner">
+				<div id="funnel-step-first" class="funnel-step is-active">
+					<?php
+						$scheduleForm = get_field('schedule_form', 'options');
+						$scheduleDataContent = get_field('schedule_data_content', 'options');
+						if(have_rows('schedule_data_heading', 'options')) {
+							while(have_rows('schedule_data_heading', 'options')) {
+								the_row();
+								echo ex_heading();
+							}
+						}
+						if($scheduleDataContent) { echo '<p class="funnel-step-text">' . $scheduleDataContent . '</p>'; }
+						echo do_shortcode('[contact-form-7 id="' . $scheduleForm . '"]')
+					?>
+				</div>
+				<div id="funnel-step-second" class="funnel-step">
+					<?php the_field('schedule_calendar_code', 'options'); ?>
+				</div>
+			</div>
+		</div>
+		<div id="modal-photo" class="modal-parent">
+			<div class="modal-close"></div>
+			<div class="modal-inner">
 			</div>
 		</div>
 		<?php wp_footer(); ?>
