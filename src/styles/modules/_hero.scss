@@ -1,7 +1,7 @@
 .module-hero_image {
   @include grid(flex-start, flex-end);
   min-height: 100vh;
-  padding: 0;
+  padding: 0 !important;
   margin-bottom: 5vw;
 
   a {

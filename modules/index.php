@@ -8,6 +8,8 @@ function ex_content() {
           get_template_part('modules/blocks');
         } elseif(get_row_layout() =='block_photo') {
           get_template_part('modules/blockphoto');
+        } elseif(get_row_layout() =='full_width') {
+          get_template_part('modules/fullwidth');
         } elseif(get_row_layout() =='heading') {
           get_template_part('modules/heading');
         } elseif(get_row_layout() =='hero_image') {
@@ -32,7 +34,8 @@ function ex_wrapper($pos, $name = '') {
   }
   if($pos == 'start') {
     $id = get_sub_field('module_id');
-    echo '<section id="' . $id . '" class="module module-' . $name . ' animate-on-enter">';
+    $pad = get_sub_field('module_padding');
+    echo '<section id="' . $id . '" class="module module-' . $name . ' module-pad-' . $pad . ' animate-on-enter">';
   } elseif($pos == 'end') {
     echo '</section>';
   }
