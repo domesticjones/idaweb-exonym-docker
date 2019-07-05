@@ -66,9 +66,9 @@
 			</div>
 		</div>
 		<div id="modal-funnel" class="modal-parent">
-			<div class="modal-close"></div>
 			<div class="modal-matte"></div>
 			<div class="modal-inner">
+				<div class="modal-close"></div>
 				<div id="funnel-step-first" class="funnel-step is-active">
 					<?php
 						$scheduleForm = get_field('schedule_form', 'options');
@@ -89,9 +89,8 @@
 			</div>
 		</div>
 		<div id="modal-photo" class="modal-parent">
-			<div class="modal-close"></div>
-			<div class="modal-inner">
-			</div>
+			<div class="modal-matte"></div>
+			<div class="modal-inner"><div class="modal-close"></div><div class="modal-content"></div>
 		</div>
 		<?php wp_footer(); ?>
 	</body>

@@ -14,6 +14,8 @@ function ex_content() {
           get_template_part('modules/heading');
         } elseif(get_row_layout() =='hero_image') {
           get_template_part('modules/hero');
+        } elseif(get_row_layout() =='image_gallery') {
+          get_template_part('modules/imagegallery');
         } elseif(get_row_layout() =='link_blocks') {
           get_template_part('modules/linkblocks');
         } elseif(get_row_layout() =='rotating_text') {
@@ -28,14 +30,14 @@ function ex_content() {
   }
 }
 
-function ex_wrapper($pos, $name = '') {
+function ex_wrapper($pos, $name = '', $classes = '') {
   if(empty($name)) {
     $name = get_row_layout();
   }
   if($pos == 'start') {
     $id = get_sub_field('module_id');
     $pad = get_sub_field('module_padding');
-    echo '<section id="' . $id . '" class="module module-' . $name . ' module-pad-' . $pad . ' animate-on-enter">';
+    echo '<section id="' . $id . '" class="module module-' . $name . ' module-pad-' . $pad . ' animate-on-enter ' . $classes . '">';
   } elseif($pos == 'end') {
     echo '</section>';
   }

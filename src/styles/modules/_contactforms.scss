@@ -75,6 +75,47 @@
   text-align: center;
 }
 
+span.wpcf7-not-valid-tip {
+  font-size: 0.75em;
+  color: inherit;
+  opacity: 0.7;
+}
+
+/**
+  Range Slider
+  ---------------------------------------------------------------------- */
+.noUi-target {
+  background-color: transparent;
+  border-radius: 0;
+  border: 1px solid $grey;
+}
+
+.noUi-connect {
+  background-color: $navy;
+}
+
+.noUi-handle {
+  box-shadow: none;
+  border-radius: 0;
+  background-color: $copper;
+  border: none;
+
+  &::after,
+  &::before {
+    background-color: $white;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+span.your-budget-low,
+span.your-budget-high {
+  display: none;
+}
+
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */

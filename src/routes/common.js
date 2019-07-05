@@ -1,7 +1,9 @@
+
 import $ from 'jquery';
 window.jQuery = $;
 require('jquery-visible');
 require('slick-carousel');
+import noUiSlider from 'nouislider';
 
 
 export default {
@@ -161,21 +163,55 @@ export default {
     });
 
     // MODAL: Close Modal Window
-    $('.modal-close').on('click', e => {
+    $('.modal-close, .modal-matte').on('click', e => {
       e.preventDefault();
   		$('#container').removeClass('modal-active');
-      $('#modal-funnel').removeClass('is-active');
-    });
-    $('.modal-matte').on('click', () => {
-      $('#container').removeClass('modal-active');
-      $('#modal-funnel').removeClass('is-active');
+      $('.modal-parent').removeClass('is-active');
     });
 
     // FUNNEL: Event Listener for Step Switch
-    var wpcf7Elm = document.querySelector('#modal-funnel .wpcf7');
-    wpcf7Elm.addEventListener('wpcf7invalid', (e) => {
+    var modalFunnel = document.querySelector('#modal-funnel .wpcf7');
+    modalFunnel.addEventListener('wpcf7mailsent', (e) => {
       $('#funnel-step-first').removeClass('is-active');
       $('#funnel-step-second').addClass('is-active');
     }, false);
+
+    // FUNNEL: Budget Range Slider
+    const funnelBudgetRange = document.getElementById('form-budget-range');
+    const funnelBudgetLow = $('#form-budget-low').val();
+    const funnelBudgetMin = $('#form-budget-low').attr('min');
+    const funnelBudgetHigh = $('#form-budget-high').val();
+    const funnelBudgetMax = $('#form-budget-high').attr('max');
+    noUiSlider.create(funnelBudgetRange, {
+      start: [funnelBudgetLow, funnelBudgetHigh],
+      step: 100,
+      range: {
+        'min': [parseInt(funnelBudgetMin)],
+        'max': [parseInt(funnelBudgetMax)],
+      },
+      connect: [false, true, false],
+    });
+    funnelBudgetRange.noUiSlider.on('update', (values, handle) => {
+      const budgetLow = Math.ceil(values[0]);
+      const budgetHigh = Math.ceil(values[1]);
+      let budgetLimit = '';
+      if(budgetHigh == funnelBudgetMax) {
+        budgetLimit = `${budgetHigh}+`;
+      } else {
+        budgetLimit = budgetHigh;
+      }
+      $('#form-budget-output').text(`$${budgetLow} - $${budgetLimit}`);
+      $('#form-budget-low').val(budgetLow);
+      $('#form-budget-high').val(budgetHigh);
+    });
+
+    // GALLERY: Open Modal Lightbox
+    $('.gallery-image').on('click', e => {
+      const $this = $(e.currentTarget);
+      const current = $this.html();
+  		$('#container').addClass('modal-active');
+      $('#modal-photo').addClass('is-active');
+      $('#modal-photo .modal-content').html(current);
+    });
   },
 };
