@@ -1,0 +1,35 @@
+.icongrid-wrap {
+  @include listStripped();
+  @include grid(space-around, flex-start, row, wrap);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+li.icongrid-single {
+  padding: 2em;
+}
+
+.icongrid-head {
+  text-align: center;
+
+  img {
+    display: block;
+    width: auto;
+    margin: 0 auto 2rem auto;
+  }
+}
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  li.icongrid-single {
+    min-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 650px) {
+  li.icongrid-single {
+    min-width: 100%;
+  }
+}

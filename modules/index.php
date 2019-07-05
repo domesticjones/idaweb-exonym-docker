@@ -14,6 +14,8 @@ function ex_content() {
           get_template_part('modules/heading');
         } elseif(get_row_layout() =='hero_image') {
           get_template_part('modules/hero');
+        } elseif(get_row_layout() =='icon_grid') {
+          get_template_part('modules/icongrid');
         } elseif(get_row_layout() =='image_gallery') {
           get_template_part('modules/imagegallery');
         } elseif(get_row_layout() =='link_blocks') {
