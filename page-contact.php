@@ -8,9 +8,12 @@
 					echo ex_heading();
 	      ex_wrapper('end');
 			endwhile; endif;
-			ex_wrapper('start', 'contact-info');
-				the_field('blurb');
-			ex_wrapper('end');
+			$blurb = get_field('blurb');
+			if($blurb) {
+				ex_wrapper('start', 'contact-info');
+					echo $blurb;
+				ex_wrapper('end');
+			}
 			ex_wrapper('start', 'contact-data');
 				echo '<div class="contact-info-left">';
 					ex_contact('email');

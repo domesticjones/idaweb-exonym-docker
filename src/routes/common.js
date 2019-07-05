@@ -1,10 +1,8 @@
-
 import $ from 'jquery';
 window.jQuery = $;
 require('jquery-visible');
 require('slick-carousel');
 import noUiSlider from 'nouislider';
-
 
 export default {
   init() {
