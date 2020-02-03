@@ -1,0 +1,122 @@
+.module-work-wrap {
+  @include grid(space-evenly, stretch, row, wrap);
+  padding: 2.5rem;
+}
+
+.work-single {
+  display: block;
+  position: relative;
+  padding: 1rem;
+  width: 33.333%;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    z-index: 0;
+    background: linear-gradient(180deg, $copper 0%, transparentize($grey, 0.4) 66%, $white 100%);
+    box-shadow: 0 3px 6px transparentize($black, 0.9);
+    @include transition(all 175ms ease-out);
+  }
+
+  h2 {
+    position: relative;
+    z-index: 2;
+    color: $navy;
+    font-size: 1.25rem;
+    @include fontBold(false);
+    line-height: 1;
+    padding: 1.5rem 2rem;
+    margin: 0;
+    letter-spacing: 0.2ex;
+    @include transition(all 175ms ease-out);
+    transform-origin: left bottom;
+  }
+
+  &:hover {
+    .work-bg {
+      transform: scale(0.95);
+
+      &::before {
+        opacity: 0.666;
+        @include transition(all 500ms ease-out 500ms);
+      }
+    }
+
+    &::before {
+      opacity: 0.666;
+    }
+
+    h2 {
+      color: $copper;
+      transform: scale(1.1);
+      @include transition(all 250ms ease-in);
+    }
+  }
+}
+
+.work-bg {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-top: 56.25%;
+  background-size: cover;
+  background-position: center center;
+  @include transition(all 175ms ease-out);
+  transform-origin: left top;
+
+  &::before {
+    content: 'More Info';
+    @include fontBold();
+    display: block;
+    color: $navy;
+    position: absolute;
+    right: -2.5%;
+    top: 50%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 1;
+    opacity: 0;
+    transform: rotate(90deg);
+    transform-origin: right;
+    @include transition(all 75ms ease-out);
+  }
+
+  img {
+    display: none;
+  }
+}
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media(max-width: 960px) {
+  .module-work-wrap {
+    padding: 0 1rem 2rem 1rem;
+  }
+
+  .work-single {
+    width: 50%;
+
+    h2 {
+      padding: 1rem;
+    }
+  }
+}
+
+@media(max-width: 600px) {
+  .module-work-wrap {
+    padding: 0;
+  }
+
+  .work-single {
+    width: 100%;
+  }
+
+  .work-bg::before {
+    content: 'Loading...';
+    transition-delay: 0s !important;
+  }
+}
