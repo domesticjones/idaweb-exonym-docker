@@ -96,3 +96,11 @@ function ex_post_nav() {
 	</nav>
 	<?php
 }
+
+// Trim Excerpt to Whole Word
+function ex_excerpt($string, $length = 160, $append = '&mldr;') {
+  if (mb_strlen($string) >= $length) {
+    $string = preg_replace('/\s+?(\S+)?$/u', '', mb_substr($string, 0, $length)) . $append;
+  }
+  return $string;
+}
