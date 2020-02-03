@@ -1,0 +1,86 @@
+{
+    "key": "group_5d13fb41423db",
+    "title": "PART - Module Settings",
+    "fields": [
+        {
+            "key": "field_5d13fb64a68f5",
+            "label": "Settings",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d13fb4ba68f4",
+            "label": "Module ID",
+            "name": "module_id",
+            "type": "text",
+            "instructions": "Unique, lowercase, no spaces, or special characters",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d1c458271bd2",
+            "label": "Module Padding",
+            "name": "module_padding",
+            "type": "button_group",
+            "instructions": "Vertical padding for top and bottom of this module.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "small": "Small",
+                "medium": "Medium",
+                "large": "Large",
+                "xlarge": "XL",
+                "crazy": "Crazy",
+                "first": "First"
+            },
+            "allow_null": 0,
+            "default_value": "medium",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1580702353
+}

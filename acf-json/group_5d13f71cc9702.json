@@ -1,0 +1,182 @@
+{
+    "key": "group_5d13f71cc9702",
+    "title": "PART - Headings",
+    "fields": [
+        {
+            "key": "field_5d13f7429af51",
+            "label": "Headings",
+            "name": "headings",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Heading",
+            "sub_fields": [
+                {
+                    "key": "field_5d13f7889af52",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 6,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_5d1405f586107",
+                    "label": "Options",
+                    "name": "options",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d14064c8610a",
+                            "label": "Color",
+                            "name": "color",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "default": "Default",
+                                "accent": "Accent"
+                            },
+                            "allow_null": 0,
+                            "default_value": "default",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5d14062d86109",
+                            "label": "Size",
+                            "name": "size",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "xsmall": "Extra Small",
+                                "small": "Small",
+                                "medium": "Medium",
+                                "large": "Large",
+                                "xlarge": "Extra Large"
+                            },
+                            "allow_null": 0,
+                            "default_value": "large",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5d14060886108",
+                            "label": "Align",
+                            "name": "align",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "left": "Left",
+                                "center": "Center",
+                                "right": "Right"
+                            },
+                            "allow_null": 0,
+                            "default_value": "left",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5d1406a11b1f2",
+                            "label": "Attributes",
+                            "name": "attributes",
+                            "type": "checkbox",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "deco": "Decorative Font",
+                                "kerning": "Extra Kerning",
+                                "bold": "Bold",
+                                "uppercase": "All Caps",
+                                "lowercase": "Lowercase",
+                                "underline": "Bottom Border",
+                                "overline": "Top Border"
+                            },
+                            "allow_custom": 0,
+                            "default_value": [
+                                "deco"
+                            ],
+                            "layout": "horizontal",
+                            "toggle": 0,
+                            "return_format": "value",
+                            "save_custom": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1580702347
+}
