@@ -89,6 +89,45 @@
   }
 }
 
+.module-pricing {
+  @include grid(center, center);
+  background-color: $greyLight;
+
+  h2 {
+    color: $navy;
+    margin-bottom: 2em;
+  }
+
+  h3 {
+    color: $navy;
+    letter-spacing: 0.2ex;
+    @include fontBold(false);
+    margin-bottom: 2rem;
+  }
+
+  p {
+    color: $navy;
+  }
+
+  .attachment-large {
+    width: 60%;
+  }
+}
+
+.pricing-content {
+  padding: 2rem 3.5rem;
+  width: 40%;
+
+  .wpcf7-form {
+    padding: 0;
+    margin-top: 1rem;
+
+    button {
+      float: none;
+    }
+  }
+}
+
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
@@ -104,6 +143,19 @@
       padding: 1rem;
     }
   }
+
+  .module-pricing {
+    @include grid(center, center, column-reverse);
+
+    .attachment-large {
+      width: 100%;
+    }
+  }
+
+  .pricing-content {
+    width: 100%;
+    padding: 2rem;
+  }
 }
 
 @media(max-width: 600px) {
@@ -118,5 +170,9 @@
   .work-bg::before {
     content: 'Loading...';
     transition-delay: 0s !important;
+  }
+
+  .module-pricing h2 {
+    font-size: 1.5em;
   }
 }

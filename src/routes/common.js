@@ -205,6 +205,7 @@ export default {
 
     // GALLERY: Open Modal Lightbox
     $('.gallery-image').on('click', e => {
+      e.preventDefault();
       const $this = $(e.currentTarget);
       const current = $this.html();
   		$('#container').addClass('modal-active');

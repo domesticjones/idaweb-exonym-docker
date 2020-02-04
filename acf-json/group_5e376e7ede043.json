@@ -39,11 +39,11 @@
             ],
             "taxonomy": "",
             "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
+                "search"
             ],
-            "elements": "",
+            "elements": [
+                "featured_image"
+            ],
             "min": "",
             "max": "",
             "return_format": "object"
@@ -134,6 +134,28 @@
                             "maxlength": "",
                             "rows": 3,
                             "new_lines": "br"
+                        },
+                        {
+                            "key": "field_5e37adb2736e0",
+                            "label": "Form",
+                            "name": "form",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "wpcf7_contact_form"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "id",
+                            "ui": 1
                         }
                     ]
                 },
@@ -194,5 +216,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1580702336
+    "modified": 1580708789
 }

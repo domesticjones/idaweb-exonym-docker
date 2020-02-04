@@ -27,50 +27,51 @@
     width: 100%;
     margin-bottom: 0.5em;
   }
+}
 
-  .h {
-    &-size {
-      &-xsmall { font-size: 1em; }
-      &-small { font-size: 1.25em; }
-      &-medium { font-size: 1.75em; }
-      &-large { font-size: 2.25em; }
-      &-xlarge { font-size: 4em; }
-    }
+.h,
+.headings .h {
+  &-size {
+    &-xsmall { font-size: 1em; }
+    &-small { font-size: 1.25em; }
+    &-medium { font-size: 1.75em; }
+    &-large { font-size: 2.25em; }
+    &-xlarge { font-size: 4em; }
+  }
 
-    &-color {
-      &-default { color: inherit; }
-      &-accent { color: $gold; }
-    }
+  &-color {
+    &-default { color: inherit; }
+    &-accent { color: $gold; }
+  }
 
-    &-kerning { letter-spacing: 0.5ex; }
-    &-uppercase { text-transform: uppercase; }
-    &-lowercase { text-transform: lowercase; }
-    &-bold { font-weight: $font-bold; }
-    &-deco { font-family: $font-deco; font-weight: $font-normal; }
+  &-kerning { letter-spacing: 0.5ex; }
+  &-uppercase { text-transform: uppercase; }
+  &-lowercase { text-transform: lowercase; }
+  &-bold { font-weight: $font-bold; }
+  &-deco { font-family: $font-deco; font-weight: $font-normal; }
 
-    &-underline::after {
-      content: '';
-      display: block;
-      width: 4rem;
-      height: 5px;
-      background-color: $gold;
-      margin-top: 1rem;
-    }
+  &-underline::after {
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 5px;
+    background-color: $gold;
+    margin-top: 1rem;
+  }
 
-    &-overline::before {
-      content: '';
-      display: block;
-      width: 4rem;
-      height: 5px;
-      background-color: $gold;
-      margin-bottom: 1.5rem;
-    }
+  &-overline::before {
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 5px;
+    background-color: $gold;
+    margin-bottom: 1.5rem;
+  }
 
-    &-align {
-      &-left { text-align: left; }
-      &-center { text-align: center; &.h-underline::after { margin: 1rem auto 0; } &.h-overline::before { margin: 0 auto 1.5rem; } }
-      &-right { text-align: right; &.h-underline::after { margin: 1rem 0 0 auto; } &.h-overline::before { margin: 0 0 1.5rem auto; } }
-    }
+  &-align {
+    &-left { text-align: left; }
+    &-center { text-align: center; &.h-underline::after { margin: 1rem auto 0; } &.h-overline::before { margin: 0 auto 1.5rem; } }
+    &-right { text-align: right; &.h-underline::after { margin: 1rem 0 0 auto; } &.h-overline::before { margin: 0 0 1.5rem auto; } }
   }
 }
 

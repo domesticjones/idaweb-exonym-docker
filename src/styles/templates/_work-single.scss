@@ -1,0 +1,160 @@
+.module-work-details {
+  @include grid(center, center);
+
+  .attachment-large {
+    width: 60%;
+  }
+
+  h1 {
+    position: relative;
+    margin-bottom: 2em;
+  }
+
+  blockquote {
+    @include grid(center, center, column);
+    margin: 2rem;
+    padding: 1rem 0;
+
+    q {
+      display: block;
+      visibility: hidden;
+      position: absolute;
+      z-index: -1;
+      font-size: 1.5em;
+      text-align: center;
+      padding: 2rem 2rem 1rem 2rem;
+      @include fontItalic(false);
+    }
+
+    cite {
+      display: block;
+      margin-top: 0;
+      font-size: 0.85em;
+      text-align: center;
+      color: $navyTrans;
+    }
+
+    .work-quote-written {
+      width: 100%;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 2rem 2rem 1rem 2rem;
+      }
+
+      &:empty + q {
+        visibility: visible;
+        position: unset;
+        z-index: unset;
+      }
+    }
+  }
+}
+
+.work-details-info {
+  color: $navy;
+  padding: 2.5rem;
+  width: 40%;
+}
+
+.work-details-links {
+  @include grid(flex-start, center, row, wrap);
+
+  a {
+    margin: 0 1em 1em 0;
+  }
+}
+
+.work-quote-heading {
+  display: none;
+}
+
+.work-tags-heading {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: $gold;
+  margin-top: 4rem;
+}
+
+.work-tags {
+  @include listStripped();
+  @include grid(flex-start, stretch, row, wrap);
+
+  li {
+    width: calc(25% - 1rem);
+    margin: 0 1rem 1rem 0;
+    text-align: center;
+    background: linear-gradient(to bottom, transparentize($grey, 0.4) 0%, $greyLight 100%);
+    padding: 1rem;
+    box-shadow: 0 2px 4px transparentize($black, 0.6);
+    color: transparentize($black, 0.3);
+    @include fontBold();
+  }
+}
+
+.module-work-media {
+  margin: 4rem 0;
+}
+
+.work-media-heading {
+  margin-bottom: 3rem;
+}
+
+.gallery-image .work-bg::before {
+  content: 'Enlarge';
+}
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .module-work-details {
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    blockquote {
+      margin: 0;
+
+      q {
+        font-size: 1.25rem;
+      }
+
+      cite {
+        font-size: 0.85em;
+      }
+    }
+  }
+
+  .work-tags li {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 960px) {
+  .module-work-details {
+    display: block;
+
+    .attachment-large {
+      width: 100%;
+    }
+  }
+
+  .work-details-info {
+    width: 100%;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .work-details-info {
+    padding: 2rem;
+  }
+
+  .work-tags li {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+}
