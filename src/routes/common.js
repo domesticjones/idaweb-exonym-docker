@@ -168,11 +168,13 @@ export default {
     });
 
     // FUNNEL: Event Listener for Step Switch
+      /*
     var modalFunnel = document.querySelector('#modal-funnel .wpcf7');
     modalFunnel.addEventListener('wpcf7mailsent', (e) => {
       $('#funnel-step-first').removeClass('is-active');
       $('#funnel-step-second').addClass('is-active');
     }, false);
+
 
     // FUNNEL: Budget Range Slider
     const funnelBudgetRange = document.getElementById('form-budget-range');
@@ -203,6 +205,8 @@ export default {
       $('#form-budget-high').val(budgetHigh);
     });
 
+       */
+
     // GALLERY: Open Modal Lightbox
     $('.gallery-image').on('click', e => {
       e.preventDefault();
@@ -212,5 +216,15 @@ export default {
       $('#modal-photo').addClass('is-active');
       $('#modal-photo .modal-content').html(current);
     });
+
+  // TEAM: Open Modal Lightbox
+  $('.team-member').on('click', e => {
+      e.preventDefault();
+      const $this = $(e.currentTarget);
+      const data = $this.find('.team-member-content').html();
+      $('#container').addClass('modal-active');
+      $('#modal-team').addClass('is-active');
+      $('#modal-team .modal-content').html(data);
+  });
   },
 };

@@ -134,6 +134,21 @@
   }
 }
 
+#modal-team {
+  max-width: 1200px;
+  margin-left: 50%;
+  transform: translate(-50%, 100vh);
+
+  .modal-inner {
+    width: auto;
+    max-width: 80vw;
+  }
+
+  &.is-active {
+    transform: translate(-50%, 0);
+  }
+}
+
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */

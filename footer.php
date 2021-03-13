@@ -65,6 +65,7 @@
 				<img src="<?php ex_logo('alternate', 'light'); ?>" alt="<?php ex_brand(); ?> Crystal Emblem" />
 			</div>
 		</div>
+		<?php wp_footer(); ?>
 		<div id="modal-funnel" class="modal-parent">
 			<div class="modal-matte"></div>
 			<div class="modal-inner">
@@ -90,8 +91,17 @@
 		</div>
 		<div id="modal-photo" class="modal-parent">
 			<div class="modal-matte"></div>
-			<div class="modal-inner"><div class="modal-close"></div><div class="modal-content"></div>
+			<div class="modal-inner">
+			  <div class="modal-close"></div>
+			  <div class="modal-content"></div>
+			</div>
 		</div>
-		<?php wp_footer(); ?>
+        <div id="modal-team" class="modal-parent">
+            <div class="modal-matte"></div>
+            <div class="modal-inner">
+              <div class="modal-close"></div>
+              <div class="modal-content"></div>
+            </div>
+        </div>
 	</body>
 </html>
