@@ -50,13 +50,20 @@
   &-bold { font-weight: $font-bold; }
   &-deco { font-family: $font-deco; font-weight: $font-normal; }
 
+  &-align {
+    &-left { text-align: left; }
+    &-center { text-align: center; &.h-underline::after { margin: 1rem auto 0; } &.h-overline::before { margin: 0 auto 1.5rem; } }
+    &-right { text-align: right; &.h-underline::after { margin: 1rem 0 0 auto; } &.h-overline::before { margin: 0 0 1.5rem auto; } }
+  }
+
   &-underline::after {
     content: '';
     display: block;
     width: 4rem;
     height: 5px;
     background-color: $gold;
-    margin-top: 1rem;
+    position: relative;
+    top: 0.5em;
   }
 
   &-overline::before {
@@ -66,12 +73,8 @@
     height: 5px;
     background-color: $gold;
     margin-bottom: 1.5rem;
-  }
-
-  &-align {
-    &-left { text-align: left; }
-    &-center { text-align: center; &.h-underline::after { margin: 1rem auto 0; } &.h-overline::before { margin: 0 auto 1.5rem; } }
-    &-right { text-align: right; &.h-underline::after { margin: 1rem 0 0 auto; } &.h-overline::before { margin: 0 0 1.5rem auto; } }
+    position: relative;
+    top: -0.25em;
   }
 }
 
