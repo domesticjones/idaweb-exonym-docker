@@ -1,6 +1,6 @@
 			<?php
 				$footerForm = get_field('contact_form', 'options');
-				if($footerForm && is_page_template() != 'page-contact.php' && is_page_template() != 'archive-work.php' && !is_singular('work')) {
+				if($footerForm && is_page_template() != 'page-contact.php' && is_page_template() != 'archive-work.php' && !is_singular('work') && !get_field('footer_form')) {
 					$footerFormBg = get_field('contact_form_photo', 'options');
 					echo '<footer id="footer-form" class="module" style="background-image: url(' . $footerFormBg['sizes']['jumbo'] . ')"><div class="footer-form-inner">';
 						if(have_rows('contact_form_heading', 'options')) {

@@ -8,6 +8,8 @@ function ex_content() {
           get_template_part('modules/blocks');
         } elseif(get_row_layout() =='block_photo') {
           get_template_part('modules/blockphoto');
+        } elseif(get_row_layout() =='blog_posts') {
+          get_template_part('modules/blogposts');
         } elseif(get_row_layout() =='full_width') {
           get_template_part('modules/fullwidth');
         } elseif(get_row_layout() =='heading') {

@@ -55,6 +55,7 @@
           echo '</nav>';
         ex_wrapper('end');
       }
+      ex_content();
       get_template_part('modules/work', 'footer');
     endwhile; endif;
   get_footer();

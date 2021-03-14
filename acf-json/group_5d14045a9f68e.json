@@ -78,6 +78,37 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_604d83e1d6b10": {
+                    "key": "layout_604d83e1d6b10",
+                    "name": "blog_posts",
+                    "label": "Blog Posts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_604d83e8d6b11",
+                            "label": "MOD - Blog Posts",
+                            "name": "mod_-_blog_posts",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_604d82acd1d66"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d1c444296f6f": {
                     "key": "layout_5d1c444296f6f",
                     "name": "full_width",
@@ -442,5 +473,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1615687501
+    "modified": 1615692794
 }

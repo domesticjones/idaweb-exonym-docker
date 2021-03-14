@@ -83,7 +83,7 @@
   @include grid(flex-start, stretch, row, wrap);
 
   li {
-    width: calc(25% - 1rem);
+    width: calc(33.333% - 1rem);
     margin: 0 1rem 1rem 0;
     text-align: center;
     background: linear-gradient(to bottom, transparentize($grey, 0.4) 0%, $greyLight 100%);
@@ -109,7 +109,7 @@
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
   .module-work-details {
     h1 {
       margin-bottom: 1rem;
@@ -130,6 +130,14 @@
 
   .work-tags li {
     width: calc(50% - 1rem);
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .work-tags li {
+    width: 100%;
+    margin: 0 0 1rem 0;
   }
 }
 
