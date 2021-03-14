@@ -1,0 +1,51 @@
+.sidebar {
+  border-left: 1px solid $black;
+  margin-bottom: 5vw;
+}
+
+.widget {
+  display: block;
+  margin-bottom: 2.5vw;
+  @include clearfix();
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.widget-title {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5ex;
+  color: $gold;
+  border-bottom: 1px solid $black;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+}
+
+.widget-author {
+  h4 {
+    color: $navy;
+    display: inline-block;
+    margin-bottom: 0.5em;
+  }
+}
+
+.sidebar-author-image {
+  float: left;
+  margin: 0 1rem 0 0;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.widget-emaillist {
+  form > div {
+    padding: 0 !important;
+  }
+
+  input, button {
+    border-radius: 0 !important;
+  }
+}

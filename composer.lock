@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0dc0b28918545ad8afeae85776e14d58",
+    "content-hash": "94eb95743ab44ca3fcde20f925d71143",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -328,6 +328,24 @@
                 "environment"
             ],
             "time": "2021-01-20T14:39:13+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/add-to-any",
+            "version": "1.7.43",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/add-to-any/",
+                "reference": "tags/1.7.43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/add-to-any.1.7.43.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/add-to-any/"
         },
         {
             "name": "wpackagist-plugin/admin-menu-editor",
