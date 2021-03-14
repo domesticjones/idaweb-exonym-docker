@@ -16,6 +16,13 @@
           }
         ex_wrapper('end');
       }
+      echo '<nav class="module module-blog-nav">';
+        wp_nav_menu(array(
+          'container' => false,
+          'theme_location' => 'blog-menu',
+          'depth' => 1,
+        ));
+      echo '</nav>';
       ex_wrapper('start', 'blog-wrap');
         while(have_posts()): the_post();
           $thumb = get_the_post_thumbnail_url($post->ID, 'medium');
@@ -26,7 +33,11 @@
           }
           echo '<article id="post-' . get_the_ID() . '" class="' . implode(' ', get_post_class()) . '">';
             echo '<a href="' . get_the_permalink() . '" class="blog-thumb' . $thumbClass . '" title="Read More about ' . get_the_title() . '" style="background-image: url(' . $thumb . ')">' . $thumbHidden . '</a>';
-            echo ex_excerpt(strip_tags(get_the_content()));
+            echo '<div class="blog-preview">';
+              echo '<h2>' . get_the_title() . '</h2>';
+              echo '<p>' . ex_excerpt(strip_tags(get_the_content())) . '</p>';
+              echo '<a href="' . get_the_permalink() . '" class="cta-button cta-button-ghost">Read more</a>';
+            echo '</div>';
           echo '</article>';
     		endwhile;
       ex_wrapper('end');

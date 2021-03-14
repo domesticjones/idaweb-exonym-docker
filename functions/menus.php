@@ -14,6 +14,7 @@ register_nav_menus(
     'header-menu' => __('Header', 'exonym'),
     'full-menu' => __('Full', 'exonym'),
     'legal-menu' => __('Legal', 'exonym'),
-    'responsive-menu' => __('Responsinve', 'exonym')
+    'responsive-menu' => __('Responsinve', 'exonym'),
+    'blog-menu' => __('Blog', 'exonym')
   )
 );
