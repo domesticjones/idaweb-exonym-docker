@@ -22,6 +22,8 @@ function ex_content() {
           get_template_part('modules/linkblocks');
         } elseif(get_row_layout() =='rotating_text') {
           get_template_part('modules/rotatingtext');
+        } elseif(get_row_layout() =='space') {
+          get_template_part('modules/space');
         } elseif(get_row_layout() =='team') {
           get_template_part('modules/team');
         } elseif(get_row_layout() =='testimonials') {

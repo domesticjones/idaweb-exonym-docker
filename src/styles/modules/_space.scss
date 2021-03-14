@@ -1,0 +1,42 @@
+.space {
+  display: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  &-desktop {
+    display: block;
+  }
+}
+
+
+/**
+  Responsive Breakpoints
+  ---------------------------------------------------------------------- */
+@media(max-width: 1024px) {
+  .space {
+    &-desktop { display: none; }
+    &-wide { display: block; }
+    &-tablet { display: none; }
+    &-mobile { display: none; }
+  }
+}
+
+@media(max-width: 768px) {
+  .space {
+    &-desktop { display: none; }
+    &-wide { display: none; }
+    &-tablet { display: block; }
+    &-mobile { display: none; }
+  }
+}
+
+@media(max-width: 520px) {
+  .space {
+    &-desktop { display: none; }
+    &-wide { display: none; }
+    &-tablet { display: none; }
+    &-mobile { display: block; }
+  }
+}
